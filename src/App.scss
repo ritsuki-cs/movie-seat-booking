@@ -1,4 +1,72 @@
 .App {
-  text-align: center;
+  main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242333;
+    color: white;
+    .show-movie-seat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .seat-type {
+        width: 100%;
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+        margin: 30px;
+        li {
+          display: flex;
+          margin: auto;
+          .seat {
+            width: 15px;
+            height: 12px;
+            margin: 3px;
+            border-radius: 10px 10px 0 0;
+            background-color: #777;
+            &.selected {
+              background-color: #6feaf6;
+            }
+            &.occupied {
+              background-color: white;
+            }
+          }
+          small {
+            color: #777;
+          }
+        }
+      }
+      .screen {
+        width: 220px;
+        height: 70px;
+        margin: 10px;
+        background-color: white;
+      }
+      .seats {
+        margin: 20px;
+        .row {
+          display: flex;
+          .seat {
+            width: 15px;
+            height: 12px;
+            margin: 3px;
+            border-radius: 10px 10px 0 0;
+            background-color: #777;
+            &.nothing {
+              background-color: #242333;
+              margin: auto 0;
+            }
+            &.selected {
+              background-color: #6feaf6;
+            }
+            &.occupied {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 

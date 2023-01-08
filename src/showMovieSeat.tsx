@@ -10,22 +10,22 @@ export function ShowMovieSeat() {
         <p>Pick a movie:</p>
       </div>
       <ul className="seat-type">
-        <li className="na">
+        <li>
           <div className="seat"></div>
           <small>N/A</small>
         </li>
-        <li className="na">
-          <div className="seat"></div>
+        <li>
+          <div className="seat selected"></div>
           <small>Selected</small>
         </li>
-        <li className="na">
-          <div className="seat"></div>
+        <li>
+          <div className="seat occupied"></div>
           <small>Occupied</small>
         </li>
       </ul>
       <div className="screen"></div>
       <SeatTable/>
-      <p>You have selected {seatCount} seats for a price of ${sumPrice}</p>
+      <p>You have selected <span>{seatCount}</span> seats for a price of $<span>{sumPrice}</span></p>
     </div>
   )
 }
